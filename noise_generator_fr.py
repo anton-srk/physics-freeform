@@ -48,7 +48,7 @@ def main():
 
     for s in sigmas:
         n = noise_gen(s)
-        with open('tmp/noise_screen_'+str(s), 'wb') as handle:
+        with open('data/noise_screen_'+str(s), 'wb') as handle:
             pickle.dump(n, handle)
 
 

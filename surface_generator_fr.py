@@ -24,10 +24,10 @@ def laplacian_kernel(x, y, sigma=.1):
 
 def main():
     # loading the surface profile
-    with open('/home/anton/Documents/z_profile', 'rb') as opened_file:
+    with open('data/z_profile', 'rb') as opened_file:
         z2t = pickle.load(opened_file).to(device)
     # loading the noise screen
-    with open('/home/anton/Documents/noise_screen_50', 'rb') as opened_file:
+    with open('data/noise_screen_50', 'rb') as opened_file:
         noise = pickle.load(opened_file).to(device)
 
     # processing the surface profile and adding the noise
@@ -52,7 +52,7 @@ def main():
 
     end = time.time()
     # dump the resulting interpolation profile to a file
-    with open('/home/anton/Documents/surface_prof_noisy', 'wb') as opened_file:
+    with open('data/surface_prof_noisy', 'wb') as opened_file:
         pickle.dump(a, opened_file)
 
     print('Time to perform an RBF \

@@ -140,7 +140,7 @@ def calc_pt(a, x):
 def main():
 
     # loading a "noisy" surface profile
-    with open('/home/anton/Documents/surface_prof_noisy_0.25_50', 'rb') as opened_file:
+    with open('data/surface_prof_noisy_0.25_50', 'rb') as opened_file:
         a = pickle.load(opened_file).to(device)
 
     X0 = Y0 = torch.linspace(0, 4, 100, requires_grad=True).type(dtype)
